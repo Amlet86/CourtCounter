@@ -32,34 +32,34 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void addThreeScoreForTeamA(View view) {
-        totalScoreTeamA = totalScoreTeamA + 3;
-        displayForTeamA(totalScoreTeamA);
+    public void addThreeScores(View view) {
+        if (view.getContentDescription().equals("teamA")) {
+            totalScoreTeamA = totalScoreTeamA + 3;
+            displayForTeamA(totalScoreTeamA);
+        }else{
+            totalScoreTeamB = totalScoreTeamB + 3;
+            displayForTeamB(totalScoreTeamB);
+        }
     }
 
-    public void addTwoScoreForTeamA(View view) {
-        totalScoreTeamA = totalScoreTeamA + 2;
-        displayForTeamA(totalScoreTeamA);
+    public void addTwoScores(View view) {
+        if (view.getContentDescription().equals("teamA")) {
+            totalScoreTeamA = totalScoreTeamA + 2;
+            displayForTeamA(totalScoreTeamA);
+        }else{
+            totalScoreTeamB = totalScoreTeamB + 2;
+            displayForTeamB(totalScoreTeamB);
+        }
     }
 
-    public void addOneScoreForTeamA(View view) {
-        totalScoreTeamA = totalScoreTeamA + 1;
-        displayForTeamA(totalScoreTeamA);
-    }
-
-    public void addThreeScoreForTeamB(View view) {
-        totalScoreTeamB = totalScoreTeamB + 3;
-        displayForTeamB(totalScoreTeamB);
-    }
-
-    public void addTwoScoreForTeamB(View view) {
-        totalScoreTeamB = totalScoreTeamB + 2;
-        displayForTeamB(totalScoreTeamB);
-    }
-
-    public void addOneScoreForTeamB(View view) {
-        totalScoreTeamB = totalScoreTeamB + 1;
-        displayForTeamB(totalScoreTeamB);
+    public void addOneScore(View view) {
+        if (view.getContentDescription().equals("teamA")) {
+            totalScoreTeamA = totalScoreTeamA + 1;
+            displayForTeamA(totalScoreTeamA);
+        }else{
+            totalScoreTeamB = totalScoreTeamB + 1;
+            displayForTeamB(totalScoreTeamB);
+        }
     }
 
     public void reset(View view) {
